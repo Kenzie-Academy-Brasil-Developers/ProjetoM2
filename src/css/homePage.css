@@ -1,0 +1,100 @@
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+h2{
+    color: var(--brand-1);
+}
+.primeiroBox img{
+    width: 30px;
+}
+
+.primeiroBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.segundoBox{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 7rem;
+    background: var(--brand-1);
+padding: 0 0 0 1rem;
+    gap: 1rem;
+    color: #FFFFFF;
+}
+
+.segundoBox img{
+    width: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 5rem;
+}
+
+.secaoCabecalho div{
+width: inherit;
+gap: 1.5rem ;
+display: flex;
+justify-content: center;
+
+
+}
+ .secaoCabecalho h3{
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 0 0 1rem;
+    
+ }
+
+.secaoCabecalho{
+    width: 100vw;
+    height: 6rem;
+    
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ div button{
+    border: none;
+    background-color: transparent;
+    width: 4rem;
+    height: 2rem;
+ }
+
+.botaoCriar{
+    background: var(--brand-1);
+    color: white;
+    border-radius: 0.2rem;
+    }
+
+    .descricao, .categoria{
+        display: none;        
+    }
+    .status, .titulo, .editar{
+opacity: 0.5;
+}
+table{
+    width: 100vw;
+    
+}
+    tr{
+        border: 1px solid rgba(2, 2, 2, 0.068);
+        border-top: none;
+        border-left:none;
+        border-right: none;
+        
+    }
+
+.carregarMais{
+    width: 7rem;
+    margin-top: 2rem;
+    
+}
