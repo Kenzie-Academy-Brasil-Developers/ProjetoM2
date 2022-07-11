@@ -1,0 +1,136 @@
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 90%;
+    padding-top: 1rem;
+}
+
+.box-habito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--brand-1);
+    color: #FFFFFF;
+    padding: 0.7rem;
+    height: 15rem;
+    border-radius: 0.3rem;
+}
+
+.box-habito h1{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.box-habito h2{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.box-habito p{
+    font-size: 1rem;
+}
+
+/* CSS div login */
+
+.box-login{
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+    margin: 0.7rem;
+    border-radius: 0.3rem;
+    align-items: center;
+    width: 90vw;
+    max-width: 498px;
+}
+
+.box-login h2{
+    padding: 0.7rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.box-login label{
+    color: var(--gray-2);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    max-width: 350px;
+}
+
+.box-login form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.7rem;
+    width: 84vw;
+    max-width: 350px;    
+}
+
+.box-login input{
+    height: 1.5rem;
+    min-width: 15.5rem;
+    border-radius: 4px;
+    padding: 9px, 18px, 9px, 18px;
+    margin-bottom: 1rem;
+    border: 0;
+    background-color: #F1F3F5;
+    max-width: 350px;
+}
+
+.box-login button{
+    background-color: var(--brand-1);
+    color: #FFFFFF;
+    padding: 0.3rem;
+    border: 0;
+    border-radius: 0.3rem;
+    max-width: 350px;
+}
+
+@media (min-width: 1024px){
+    main{
+        flex-direction: row;
+        gap: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .box-habito{
+        height: 25rem;
+    }
+
+    .box-habito h1{
+        margin-bottom: 50px;
+    }
+
+    .box-habito h2{
+        margin-bottom: 30px;
+    }
+
+    .box-login{
+        margin: 0;
+        min-height: 262px;
+        height: 26.5rem;
+    }
+
+    .box-login form{
+        padding: 0;
+    }
+
+    .box-login{
+        justify-content: center;
+    }
+}
