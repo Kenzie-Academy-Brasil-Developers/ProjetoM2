@@ -70,6 +70,7 @@ select {
 textarea,
 select {
     background-color: var(--grey-5);
+    resize: none;
 }
 
 .modal-inner input,
