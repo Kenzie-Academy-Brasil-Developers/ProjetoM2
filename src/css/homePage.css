@@ -11,9 +11,6 @@
     align-items: center;
     display: none;
 }
-#modal_excluirHabito{
-    display: none;
-}
 
 .modal-inner {
     display: flex;
@@ -206,6 +203,7 @@ main {
 
 
 }
+
 
 .secaoCabecalho h3 {
     color: black;
