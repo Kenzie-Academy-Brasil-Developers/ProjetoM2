@@ -1,0 +1,336 @@
+.modal_geral {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    gap: 1rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 0.5rem;
+}
+
+.fecharModal_modal-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.fecharModal_modal-inner img {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.modal-inner form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fecharModal_modal-inner h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--grey-1);
+}
+
+.fecharModal_modal-inner button {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.modal-inner input,
+textarea,
+button,
+select {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.modal-inner input,
+textarea,
+select {
+    background-color: var(--grey-5);
+    resize: none;
+}
+
+.modal-inner input,
+textarea::placeholder {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.botaoAzulEscuro {
+    background-color: var(--brand-1);
+    color: #FFFFFF;
+}
+
+
+#buttonFechar {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+@media (min-width:1024px) {
+    .modal-inner {
+        width: 31.3rem;
+        height: 30.1rem;
+    }
+
+    .modal-inner form {
+        width: 90%;
+    }
+
+    .modal-inner div {
+        width: 90%;
+    }
+}
+
+body {
+    font-family: var(--font);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.primeiroBox h2 {
+    color: var(--brand-1);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.primeiroBox img {
+    width: 30px;
+}
+
+.primeiroBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+    height: 2.5rem;
+}
+
+.segundoBox {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 7rem;
+    background: var(--brand-1);
+    padding: 0 0 0 1rem;
+    gap: 1rem;
+    color: #FFFFFF;
+}
+
+.segundoBox img {
+    width: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 5rem;
+}
+
+.secaoCabecalho div {
+    width: inherit;
+    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.secaoCabecalho h3 {
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 0 0 1rem;
+
+}
+
+.secaoCabecalho {
+    width: 100vw;
+    height: 6rem;
+
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div button {
+    border: none;
+    background-color: transparent;
+    width: 4rem;
+    height: 2rem;
+}
+
+.botaoCriar {
+    background: var(--brand-1);
+    color: white;
+    border-radius: 0.2rem;
+}
+
+.descricao,
+.categoria {
+    display: none;
+}
+
+.status,
+.titulo,
+.editar {
+    opacity: 0.5;
+}
+
+table {
+    display: flex;
+    width: max-content;
+}
+
+
+tr {
+    border-bottom: solid 2px rgba(0, 0, 0, 0.092);
+    height: 2.3rem;
+
+}
+
+.carregarMais {
+    width: 7rem;
+    height: 1.6rem;
+    margin-top: 2rem;
+    background-color: var(--brand-1);
+    border: unset;
+    color: #FFFFFF;
+    border-radius: 0.2rem;
+}
+
+.check:checked {
+    background-color: var(--sucess);
+}
+
+.conteudoDescricao,
+.conteudoCategoria {
+    display: none;
+}
+
+
+.editar {
+    width: 20vw;
+
+}
+
+.conteudoEditar {
+    font-weight: 600;
+
+}
+
+.titulo {
+    width: 55vw;
+    display: flex;
+}
+
+.status {
+    width: 25vw;
+}
+
+.conteudoTitulo {
+    display: flex;
+}
+
+th {
+    margin-top: 0.5rem;
+}
+
+
+@media (min-width: 1000px) {
+    .secaoCabecalho {
+        flex-direction: row;
+        align-items: center;
+        width: 90vw;
+        justify-content: space-between;
+        max-width: 900px;
+    }
+
+    .secaoCabecalho div {
+        width: 200px;
+
+    }
+
+    .categoria,
+    .descricao,
+    .conteudoCategoria,
+    .conteudoDescricao {
+        display: flex;
+        opacity: 0.5;
+        width: 100px;
+        justify-content: center;
+    }
+
+    .descricao,
+    .conteudoDescricao {
+        display: flex;
+        opacity: 0.5;
+        width: 300px;
+        justify-content: center;
+    }
+
+    .titulo,
+    .conteudoTitulo {
+        width: 400px;
+        padding: 0 0 0 0.5rem;
+    }
+
+    .status {
+        width: 120px;
+    }
+
+    .check {
+        width: 100px;
+    }
+
+    .editar,
+    .conteudoEditar {
+        width: 100px;
+    }
+
+    .cabecalhoTabela {
+        display: flex;
+        width: 100vw;
+    }
+
+    .conteudoTabela {
+        display: flex;
+    }
+
+    table {
+
+        border: 2px solid rgba(0, 0, 0, 0.098);
+    }
+
+    table,
+    tr,
+    th {
+        max-width: 1000px;
+
+    }
+}
