@@ -71,7 +71,9 @@ select {
     background-color: var(--grey-5);
     resize: none;
 }
-
+.modal_excluirHabito{
+    display: flex;
+}
 .modal-inner input,
 textarea::placeholder {
     font-size: 1rem;
@@ -132,6 +134,20 @@ textarea::placeholder {
 
     .modal-inner div {
         width: 90%;
+    }
+
+    .excluirHabito_modal-inner{
+        height: 20vh;
+    }
+
+    .botoes_excluirHabito{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #botaoCancelar_excluirHabito{
+        width: 10rem;
     }
 }
 
