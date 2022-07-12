@@ -1,14 +1,20 @@
-main{
+body {
+    font-family: var(--font);
+}
+
+main {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-
-h2{
+.primeiroBox h2 {
     color: var(--brand-1);
+    font-weight: 600;
+    font-size: 1.2rem;
 }
-.primeiroBox img{
+
+.primeiroBox img {
     width: 30px;
 }
 
@@ -16,85 +22,200 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    margin: 0 1rem;
+    height: 2.5rem;
 }
 
-.segundoBox{
+.segundoBox {
     display: flex;
     align-items: center;
     width: 100vw;
     height: 7rem;
     background: var(--brand-1);
-padding: 0 0 0 1rem;
+    padding: 0 0 0 1rem;
     gap: 1rem;
     color: #FFFFFF;
 }
 
-.segundoBox img{
+.segundoBox img {
     width: 50px;
     border: 2px solid #FFFFFF;
     border-radius: 5rem;
 }
 
-.secaoCabecalho div{
-width: inherit;
-gap: 1.5rem ;
-display: flex;
-justify-content: center;
+.secaoCabecalho div {
+    width: inherit;
+    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
 
 
 }
- .secaoCabecalho h3{
+
+.secaoCabecalho h3 {
     color: black;
     font-weight: 600;
     font-size: 20px;
     margin: 0 0 0 1rem;
-    
- }
 
-.secaoCabecalho{
+}
+
+.secaoCabecalho {
     width: 100vw;
     height: 6rem;
-    
+
     gap: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
- div button{
+div button {
     border: none;
     background-color: transparent;
     width: 4rem;
     height: 2rem;
- }
+}
 
-.botaoCriar{
+.botaoCriar {
     background: var(--brand-1);
     color: white;
     border-radius: 0.2rem;
-    }
-
-    .descricao, .categoria{
-        display: none;        
-    }
-    .status, .titulo, .editar{
-opacity: 0.5;
 }
-table{
-    width: 100vw;
+
+.descricao,
+.categoria {
+    display: none;
+}
+
+.status,
+.titulo,
+.editar {
+    opacity: 0.5;
+}
+
+table {
+    display: flex;
+    width: max-content;
+}
+
+
+tr {
+    border-bottom: solid 2px rgba(0, 0, 0, 0.092);
+    height: 2.3rem;
     
 }
-    tr{
-        border: 1px solid rgba(2, 2, 2, 0.068);
-        border-top: none;
-        border-left:none;
-        border-right: none;
-        
-    }
 
-.carregarMais{
+.carregarMais {
     width: 7rem;
+    height: 1.6rem;
     margin-top: 2rem;
-    
+    background-color: var(--brand-1);
+    border: unset;
+    color: #FFFFFF;
+    border-radius: 0.2rem;
+}
+
+.check:checked {
+    background-color: var(--sucess);
+}
+
+.conteudoDescricao,
+.conteudoCategoria {
+    display: none;
+}
+
+
+.editar {
+    width: 20vw;
+
+}
+
+.conteudoEditar {
+    font-weight: 600;
+
+}
+
+.titulo {
+    width: 55vw;
+    display: flex;
+}
+
+.status {
+    width: 25vw;
+}
+
+.conteudoTitulo {
+    display: flex;
+}
+
+th {
+    margin-top: 0.5rem;
+}
+
+
+@media  (min-width: 1000px) {
+    .secaoCabecalho {
+        flex-direction: row;
+        align-items: center;
+        width: 90vw;
+        justify-content: space-between;
+        max-width: 900px;
+    }
+    .secaoCabecalho div{
+        width: 200px;
+
+    }
+
+    .categoria,
+    .descricao,
+    .conteudoCategoria,
+    .conteudoDescricao {
+        display: flex;
+        opacity: 0.5;
+        width: 100px;
+        justify-content: center;
+    }
+
+    .descricao, .conteudoDescricao{
+        display: flex;
+        opacity: 0.5;
+        width: 300px;
+        justify-content: center;
+    }
+
+    .titulo,
+    .conteudoTitulo {
+        width: 400px;
+        padding: 0 0 0 0.5rem;
+    }
+
+    .status {
+        width: 120px;
+    }
+    .check{
+        width: 100px;
+    }
+
+    .editar,
+    .conteudoEditar {
+        width: 100px;
+    }
+
+    .cabecalhoTabela {
+        display: flex;
+        width: 100vw;
+    }
+
+    .conteudoTabela {
+        display: flex;
+    }
+    table{
+        
+        border: 2px solid rgba(0, 0, 0, 0.098);
+    }
+
+    table, tr, th{
+        max-width: 1000px;
+    }
 }
