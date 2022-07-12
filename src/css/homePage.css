@@ -11,7 +11,9 @@
     align-items: center;
     display: none;
 }
-
+#modal_excluirHabito{
+    display: none;
+}
 
 .modal-inner {
     display: flex;
