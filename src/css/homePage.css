@@ -11,7 +11,9 @@
     align-items: center;
     display: none;
 }
-
+#modal_excluirHabito{
+    display: none;
+}
 
 .modal-inner {
     display: flex;
@@ -71,7 +73,9 @@ select {
     background-color: var(--grey-5);
     resize: none;
 }
-
+.modal_excluirHabito{
+    display: flex;
+}
 .modal-inner input,
 textarea::placeholder {
     font-size: 1rem;
@@ -83,11 +87,40 @@ textarea::placeholder {
     color: #FFFFFF;
 }
 
-
 #buttonFechar {
     background-color: transparent;
     cursor: pointer;
     padding: 0;
+}
+
+.divExcluirEsteHabito{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.divExcluirEsteHabito h2{
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.divExcluirEsteHabito p{
+    font-size: 1rem;
+}
+
+.botoes_excluirHabito button{
+    padding: 0.5rem;
+}
+
+.botaoCinza{
+    background-color: var(--grey-5);
+}
+
+.botaoVermelho{
+    background-color: var(--error-1);
+    width: max-content;
 }
 
 
@@ -103,6 +136,20 @@ textarea::placeholder {
 
     .modal-inner div {
         width: 90%;
+    }
+
+    .excluirHabito_modal-inner{
+        height: 20vh;
+    }
+
+    .botoes_excluirHabito{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #botaoCancelar_excluirHabito{
+        width: 10rem;
     }
 }
 
