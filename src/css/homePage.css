@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .container {
@@ -80,6 +81,12 @@ textarea::placeholder {
 .modal-inner button {
     background-color: var(--brand-1);
     color: #FFFFFF;
+}
+
+#buttonFechar{
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
 }
 
 @media (min-width:1024px) {
