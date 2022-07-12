@@ -12,6 +12,13 @@
     display: none;
 }
 
+#modal_editarUsuario{
+    display: flex;
+}
+
+.botaoAzulClaro{
+    background-color: #A0ADF9;
+}
 
 .modal-inner {
     display: flex;
@@ -103,6 +110,10 @@ textarea::placeholder {
 
     .modal-inner div {
         width: 90%;
+    }
+
+    .editarUsuario_modal-inner{
+        height: 30vh;
     }
 }
 
