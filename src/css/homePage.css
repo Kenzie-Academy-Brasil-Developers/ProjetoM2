@@ -1,3 +1,7 @@
+button{
+  cursor: pointer;
+}
+
 .modal_geral {
   width: 100vw;
   height: 100vh;
@@ -11,9 +15,7 @@
   align-items: center;
   display: none;
 }
-.modal_editarHabito {
-  display: flex;
-}
+
 
 .modal-inner {
   display: flex;
