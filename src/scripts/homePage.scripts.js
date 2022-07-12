@@ -1,4 +1,3 @@
-
 //evento de abrir e fechar modal criar habito
 const modal = document.querySelector('#modal_criarHabito')
 const buttonCriarModal = document.querySelector('.botaoCriar')
@@ -17,6 +16,6 @@ buttonExcluirModal.addEventListener('click', () => {
     modalExcluir.style.display = 'flex'
 })
 const buttonFecharModalExcluir = document.querySelector('.imageFecharExcluir')
-buttonFecharModal.addEventListener('click', () => {
+buttonFecharModalExcluir.addEventListener('click', () => {
     modalExcluir.style.display = 'none'
 })
