@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kenzie Habit</title>
+
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/componentes.css" />
@@ -17,7 +18,8 @@
     />
   </head>
 
-  <body>
+<body>
+
     <header>
       <div class="primeiroBox">
         <h2>KenzieHablit</h2>
@@ -135,7 +137,6 @@
             <img src="../assets/img/x.png" alt="Fechar" class="imageFechar" />
           </button>
         </div>
-
         <form>
           <label for="titulo">Título</label>
           <input id="placeholder"
@@ -172,6 +173,28 @@
       </div>
     </div>
 
+    <div class="modal_geral" id="modal_excluirHabito">
+
+        <div class="modal-inner excluirHabito_modal-inner">
+            <div class="fecharModal_modal-inner">
+                <h2>Excluir hábito</h2>
+                <button id="buttonFechar">
+                    <img src="../assets/img/x.png" alt="Fechar" class="imageFecharExcluir">
+                </button>
+            </div>
+
+            <div class="divExcluirEsteHabito">
+                <h2>Certeza que deseja excluir este hábito?</h2>
+                <p>Após executar essa ação não será possível desfazer</p>
+            </div>
+
+            <div class="botoes_excluirHabito">
+                <button class="botaoCinza" id="botaoCancelar_excluirHabito">cancelar</button>
+                <button class="botaoVermelho">Sim, excluir este hábito</button>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="../scripts/homePage.scripts.js"></script>
-  </body>
+</body>
 </html>
