@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenzie Habit</title>
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/base.css">
-    <link rel="stylesheet" href="./src/css/componentes.css">
-    <link rel="stylesheet" href="./src/css/homePage.css">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/base.css">
+    <link rel="stylesheet" href="/src/css/componentes.css">
+    <link rel="stylesheet" href="/src/css/homePage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <div class="modal">
+        <div class="container">
+            <div class="modal-inner">
+                <div>
+                    <h2>Criar hábito</h2>
+                    <img src="/src/assets/img/x.png" alt="">
+                </div>
+                <form>
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" placeholder="Digitar título">
+                    <label for="descricao"></label>
+                    <textarea name="descricao" id="" cols="30" rows="10" placeholder="Digitar descrição"></textarea>
+                    <label for="categoria"></label>
+                    <select name="categoria">
+                    <Option>Exemplo 1</Option>
+                    <Option>Exemplo 2</Option>
+                </select>
+                    <button>Inserir</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
     <script type="module" src="../scripts/homePage.scripts.js"></script>
 </body>
+
 </html>
