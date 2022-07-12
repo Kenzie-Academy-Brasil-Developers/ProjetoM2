@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    display: flex;
 }
 
 .box {
@@ -76,6 +76,7 @@ select {
 textarea,
 select {
     background-color: var(--grey-5);
+    resize: none;
 }
 
 .modal-inner input,
@@ -89,15 +90,25 @@ textarea::placeholder {
     color: #FFFFFF;
 }
 
+<<<<<<< HEAD
+=======
+#buttonFechar {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+>>>>>>> 28bf68f9685b289b1ce67b728fb52afbc49e8e29
 
 @media (min-width:1024px) {
     .modal-inner {
         width: 31.3rem;
         height: 30.1rem;
     }
+
     .modal-inner form {
         width: 90%;
     }
+
     .modal-inner div {
         width: 90%;
     }
