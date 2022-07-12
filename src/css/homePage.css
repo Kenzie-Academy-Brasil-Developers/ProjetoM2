@@ -2,12 +2,21 @@ body {
     font-family: var(--font);
 }
 
+
+
 main {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
+.primeiroBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+    height: 2.5rem;
+}
 .primeiroBox h2 {
     color: var(--brand-1);
     font-weight: 600;
@@ -18,12 +27,10 @@ main {
     width: 30px;
 }
 
-.primeiroBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 1rem;
-    height: 2.5rem;
+.primeiroBox > .btnLogout {
+    background: var(--brand-1);
+    color: white;
+    border-radius: 0.2rem;
 }
 
 .segundoBox {
