@@ -86,7 +86,7 @@ buttonFecharEdit.addEventListener('click', () => {
 })
 
 // evento button logout 
-const buttonLogout = document.querySelector('.btnLogout')
+const buttonLogout = document.querySelector('.linkLogout')
 buttonLogout.addEventListener('click', () => {
     localStorage.removeItem("@kenzie-habits-token")
     localStorage.removeItem("@kenzie-habits-user")

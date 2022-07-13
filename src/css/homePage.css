@@ -17,6 +17,13 @@ button{
   display: none;
 }
 
+#modal_editarUsuario{
+    display: flex;
+}
+
+.botaoAzulClaro{
+    background-color: #A0ADF9;
+}
 
 .modal-inner {
   display: flex;
@@ -231,6 +238,11 @@ label {
         width: 90%;
     }
 
+
+    .editarUsuario_modal-inner{
+        height: 30vh;
+    }
+
     .excluirHabito_modal-inner{
         height: 20vh;
     }
@@ -244,6 +256,7 @@ label {
     #botaoCancelar_excluirHabito{
         width: 10rem;
     }
+
 
 }
 
@@ -275,6 +288,54 @@ main {
   height: 2.5rem;
 
 }
+
+.dropdown{
+  position: relative;
+  display: inline-block;  
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color:var(--brand-4);
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+  border-radius:0.250rem;
+  border: whitesmoke;
+}
+
+.dropdown-content a {
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  border-radius: 0.250rem;
+}
+
+.dropdown-content a:hover {
+  background-color:var(--brand-4);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media  (max-width: 490px){
+  .dropdown-content a {
+    display: flex;
+  }
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+}
+
+.dropdown:hover .dropbtn {
+  background-color:  #f9f9f9;
+}
+
+
+
 
 .segundoBox {
   display: flex;
