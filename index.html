@@ -6,33 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kenzie Habit Login</title>
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/base.css">
+    <!-- <link rel="stylesheet" href="./src/css/base.css"> -->
     <link rel="stylesheet" href="./src/css/componentes.css">
     <link rel="stylesheet" href="./src/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <main>
-      <div class="container-habit">
-        <h1>KenzieHabit</h1>
-        <h2 class="h2__container-habit">If you are going to use a passage of Lorem Ipsum</h2>
-        <p>you need to be sure there isn't anything</p>
-      </div>
 
-      <div class="container-Login">
-        <h2 class="h2__container-login">Login</h2>
+<body>
+  <main>
+    <div class="box-habito">
+      <h1>KenzieHabit</h1>
+      <h2>If you are going to use a passage of Lorem Ipsum</h2>
+      <p>you need to be sure there isn't anything</p>
+    </div>
 
-        <form>
-          <label for="email">Usuário</label>
-          <input type="text" name="email">
-          <label for="password">Senha</label>
-          <input type="password" name="password">
-          <button type="submit">Entrar</button>
-        </form>
-      </div>
-    </main>
-    <script type="module" src="./src/scripts/index.login.js"></script>
-  </body>
+    <div class="box-login">
+      <h2>Login</h2>
+
+      <form>
+        <label for="email">Usuário</label>
+        <input type="text" name="email" placeholder="Email" id="inputSenha">
+        <label for="password">Senha</label>
+        <input type="password" name="password" placeholder="Senha">
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </main>
+  <script type="module" src="./src/scripts/index.login.js"></script>
+</body>
+
 </html>
