@@ -214,11 +214,6 @@ label {
     width: 15rem;
     height: 2.5rem;
   }
-  .option-criarHabito{
-    background-color: red;
-    width: 100px;
-   
-  }
 
   #placeholder-textarea::placeholder {
     font-size: 17px;
@@ -402,7 +397,6 @@ div button {
 }
 
 table {
-  display: flex;
   width: max-content;
 }
 

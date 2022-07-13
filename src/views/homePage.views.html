@@ -19,23 +19,7 @@
 <body>
 
 
-    <!-- <header>
-        <div class="primeiroBox">
-            <h2>KenzieHablit</h2>
-            <figure class="figureUser">
-                <img src="../assets/img/Ellipse 3.png" alt="" />
-            </figure>
-            <button class="btnLogout">Logout</button>
-        </div>
-        <div class="segundoBox">
-            <figure>
-        <img src="../assets/img/Ellipse 3.png" alt="" />
-      </figure>
-      <h3>Julia Silva Rodrigues</h3>
-        </div>
-        </header> -->
-
-    <header>
+   <header>
         <div class="primeiroBox">
             <h2>KenzieHablit</h2>
             <div class="dropdown">
@@ -51,8 +35,7 @@
         <div class="segundoBox">
 
         </div>
-    </header>
-
+    </header>     
 
     <main>
         <section class="secaoCabecalho">
@@ -75,7 +58,7 @@
                 </tr>
 
 
-                <!-- <tr class="conteudoTabela">
+            <!-- <tr class="conteudoTabela">
           <th class="conteudoStatus">
             <input type="checkbox" class="check" />
           </th>
@@ -135,34 +118,32 @@
             </div>
             <form>
                 <label for="titulo">Título</label>
-                <input id="placeholder" type="text" name="titulo" placeholder="Fazer exercícios segunda pela manhã" />
+                <input id="placeholder" type="text" name="habit_title" placeholder="Fazer exercícios segunda pela manhã" />
                 <label for="descricao">Descrição</label>
-                <textarea class="textarea-altura" name="descricao" id="placeholder-textarea" cols="30" rows="10"
+                <textarea class="textarea-altura" name="habit_description" id="placeholder-textarea" cols="30" rows="10"
                     placeholder="Ir correr na praça próximo de casa às 7h:30min da manhã"></textarea>
                 <label for="categoria">Categoria</label>
-                <select class="select-categorias" name="categoria">
+                <select class="select-categorias" name="habit_category">
                     <option class="option-criarHabito">Exemplo 1</option>
                     <option class="option-criarHabito">Exemplo 2</option>
 
                 </select>
                 <div class="status--EditarHabito">
                     <label for="checkbox">Status</label>
-                    <input name="checkbox" type="checkbox">
+                    <input name="habit_status" type="checkbox">
 
                 </div>
                 <div class="bottom-div">
-                    <button class="botaoExcluir">Excluir</button>
-                    <button class="botaoAzulEscuroSalvar">Salvar alterações</button>
+                    <button class="botaoExcluir" >Excluir</button>
+                    <button class="botaoAzulEscuroSalvar" id="botaoSalvarAlteracoes">Salvar alterações</button>
                 </div>
             </form>
         </div>
     </div>
 
 
-
     <!-- MODAL EXCLUIR HABITO -->
     <div class="modal_geral" id="modal_excluirHabito">
-
         <div class="modal-inner excluirHabito_modal-inner">
             <div class="fecharModal_modal-inner">
                 <h2>Excluir hábito</h2>
@@ -170,17 +151,20 @@
                     <img src="../assets/img/x.png" alt="Fechar" class="imageFecharExcluir">
                 </button>
             </div>
-
             <div class="divExcluirEsteHabito">
                 <h2>Certeza que deseja excluir este hábito?</h2>
                 <p>Após executar essa ação não será possível desfazer</p>
             </div>
-
             <div class="botoes_excluirHabito">
                 <button class="botaoCinza" id="botaoCancelar_excluirHabito">cancelar</button>
                 <button class="botaoVermelho">Sim, excluir este hábito</button>
             </div>
         </div>
+        <div class="bottom-div">
+          <button class="botaoExcluir">Excluir</button>
+          <button class="botaoAzulEscuroSalvar" id="botaoSalvarAlteracoes">Salvar alterações</button>
+        </div>
+      </form>
     </div>
 
 
@@ -202,6 +186,12 @@
                 <button class="botaoAzulClaro">Inserir</button>
             </form>
         </div>
+
+
+      <div class="botoes_excluirHabito">
+        <button class="botaoCinza" id="botaoCancelar_excluirHabito">cancelar</button>
+        <button class="botaoVermelho" id="botaoExcluirHabito">Sim, excluir este hábito</button>
+      </div>
 
     </div>
 
