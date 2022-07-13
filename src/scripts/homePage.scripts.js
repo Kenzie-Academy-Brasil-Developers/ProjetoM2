@@ -185,7 +185,7 @@ buttonCriandoHabito.addEventListener('click', () => {
 
 }) 
 
-
+//Abrir modal de editar perfil e fechar
 const buttonEditarPerfil = document.querySelector('.linkEditar')
 const modalEditarUsuario = document.querySelector('#modal_editarUsuario')
 const buttonFecharEditarPerfil = document.querySelector('.imageFecharEditarPerfil')
