@@ -184,3 +184,14 @@ buttonCriandoHabito.addEventListener('click', () => {
     }, 1000)
 
 }) 
+
+
+const buttonEditarPerfil = document.querySelector('.linkEditar')
+const modalEditarUsuario = document.querySelector('#modal_editarUsuario')
+const buttonFecharEditarPerfil = document.querySelector('.imageFecharEditarPerfil')
+buttonEditarPerfil.addEventListener('click', () => {
+    modalEditarUsuario.style.display = 'flex'
+})
+buttonFecharEditarPerfil.addEventListener('click', () => {
+    modalEditarUsuario.style.display = 'none'
+})
