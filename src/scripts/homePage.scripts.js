@@ -1,4 +1,4 @@
-// import Habito from "../controller/habits.controller.js";
+import Habito from "../controller/habits.controller.js"
 
 // // const newHabit = await Habito.createHabit({
 // //     "habit_title": "bater ponto corretamente",
@@ -55,7 +55,7 @@ buttonCriarModal.addEventListener('click', () => {
 const buttonFecharModal = document.querySelector('.imageFechar')
 buttonFecharModal.addEventListener('click', () => {
     modal.style.display = 'none'
-}) 
+})
 
 //evento de abrir e fechar modal de excluir habito
 const modalExcluir = document.querySelector('#modal_excluirHabito')
@@ -114,3 +114,63 @@ function elementosDom(data) {
     figureBoxMenor.append(imgMenorBox)
 }
 elementosDom(usuario)
+
+
+
+
+//criar habito
+
+const buttonCriandoHabito = document.querySelector('.botaoAzulEscuro')
+buttonCriandoHabito.addEventListener('click', () => {
+    const titulo = document.querySelector('.inputTitulo').value.trim()
+    const descricao = document.querySelector(".areadescricao").value
+    const select = document.querySelector('.areacategoria').value
+
+    let habito = {
+        habit_title: titulo,
+        habit_description: descricao,
+        habit_category: select
+    }
+    Habito.createHabit(habito)
+    setTimeout(() => {
+        window.location.reload(true)
+    }, 1000)
+
+})
+
+
+
+let objs = await Habito.readAll()
+function listandoHabitos(obj) {
+
+    obj.forEach(elem => {
+        const table = document.querySelector('table')
+        const tr = document.createElement("tr")
+        const thStatus = document.createElement('th')
+        const inputCheck = document.createElement('input')
+        const thTitulo = document.createElement('th')
+        const thDescricao = document.createElement('th')
+        const thCategoria = document.createElement('th')
+        const thEditar = document.createElement('th')
+
+        inputCheck.type = 'checkbox'
+        inputCheck.className = 'check'
+        thStatus.className = 'conteudoStatus'
+        thTitulo.className = 'conteudoTitulo'
+        thDescricao.className = 'conteudoDescricao'
+        thCategoria.className = 'conteudoCategoria'
+        thEditar.className = 'conteudoEditar'
+        tr.className = 'conteudoTabela'
+
+        thTitulo.innerText = elem.habit_title
+        thDescricao.innerText = elem.habit_description
+        thCategoria.innerText = elem.habit_category
+        thEditar.innerText = '...'
+        thEditar.id = elem.habit_id
+
+        thStatus.appendChild(inputCheck)
+        tr.append(thStatus, thTitulo, thDescricao, thCategoria, thEditar)
+        table.append(tr)
+    })
+}
+listandoHabitos(objs)
