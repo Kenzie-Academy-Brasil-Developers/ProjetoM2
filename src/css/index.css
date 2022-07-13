@@ -1,17 +1,17 @@
-body{
+body {
     height: 100vh;
 }
 
-main{
-   display: flex;
-   flex-direction: column;
-   height: 100vh;
-   width: 100vw;
-   align-items: center;
-   justify-content: center;
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
 }
 
-.box-habito{
+.box-habito {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,25 +24,25 @@ main{
     max-width: 550px;
 }
 
-.box-habito h1{
+.box-habito h1 {
     font-size: 1.75rem;
     margin: 0.3rem 1.5rem;
 }
 
-.box-habito h2{
+.box-habito h2 {
     font-size: 1.5rem;
     margin: 0 1.5rem;
-
 }
 
-.box-habito p{
+.box-habito p {
     font-size: 1rem;
     margin: 0.3rem 1.5rem;
 }
 
+
 /* CSS div login */
 
-.box-login{
+.box-login {
     height: 16rem;
     display: flex;
     flex-direction: column;
@@ -53,17 +53,16 @@ main{
     width: 60vw;
     min-width: 320px;
     max-width: 550px;
-
 }
 
-.box-login h2{
+.box-login h2 {
     padding: 0.7rem;
     font-family: 'Inter', sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
 }
 
-.box-login label{
+.box-login label {
     color: var(--gray-2);
     font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
@@ -73,14 +72,14 @@ main{
     max-width: 450px;
 }
 
-.box-login form{
+.box-login form {
     display: flex;
     flex-direction: column;
     width: inherit;
     align-items: center;
 }
 
-.box-login input{
+.box-login input {
     height: 2rem;
     width: 80%;
     border-radius: 4px;
@@ -92,7 +91,7 @@ main{
     max-width: 450px;
 }
 
-.box-login button{
+.box-login button {
     background-color: var(--brand-1);
     color: #FFFFFF;
     padding: 0.3rem;
@@ -104,42 +103,75 @@ main{
     max-width: 450px;
 }
 
-@media (min-width: 1024px){
-    main{
+@media (min-width: 1024px) {
+    main {
         flex-direction: row;
         gap: 0;
         width: 100vw;
         height: 100vh;
     }
-
-    .box-habito{
+    .box-habito {
         height: 25rem;
         padding: 0 2rem;
         width: unset;
     }
-
-    .box-habito h1{
+    .box-habito h1 {
         margin-bottom: 50px;
     }
-
-    .box-habito h2{
+    .box-habito h2 {
         margin-bottom: 30px;
         flex-wrap: wrap;
     }
-
-    .box-login{
+    .box-login {
         margin: 0;
         min-height: 262px;
         height: 26.5rem;
     }
-
-    .box-login form{
+    .box-login form {
         width: max-content;
         padding: 0;
     }
-
-    .box-login{
+    .box-login {
         justify-content: center;
         max-height: 400px;
     }
+}
+
+.div--Container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.381);
+}
+
+.loginIncorreto {
+    display: flex;
+    width: 15rem;
+    border: none;
+    height: 5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #F1F3F5;
+    border-radius: 0.3rem;
+}
+
+#txt-loginIncorreto {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    top: 0.5rem;
+}
+
+.btn-fechar-loginIncorreto {
+    width: 4rem;
+    height: 1.5rem;
+    border: 0.5px black solid;
+    background-color: var(--brand-1);
+    color: white;
+    border-radius: 0.2rem;
 }
