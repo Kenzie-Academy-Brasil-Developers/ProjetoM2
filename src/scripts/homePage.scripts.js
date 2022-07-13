@@ -218,4 +218,4 @@ buttonCriandoHabito.addEventListener('click', () => {
         window.location.reload(true)
     }, 1000)
 
-})
+}) 
