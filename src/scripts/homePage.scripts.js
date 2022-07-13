@@ -220,4 +220,3 @@ botaoInserir.addEventListener("click", async (event) => {
     localStorage.setItem("@kenzie-habits-user", JSON.stringify(atualizarLocalStorage))
     window.location.reload(true)
 })
-}) 
