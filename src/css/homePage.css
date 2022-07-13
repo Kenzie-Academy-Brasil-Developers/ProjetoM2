@@ -17,9 +17,7 @@ button{
   display: none;
 }
 
-#modal_editarUsuario{
-    display: flex;
-}
+
 
 .botaoAzulClaro{
     background-color: #A0ADF9;
