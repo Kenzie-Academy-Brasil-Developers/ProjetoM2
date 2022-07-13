@@ -1,6 +1,15 @@
 import Usuario from "../controller/usuario.controller.js";
 
-Usuario.login({
-    email: 'grupo3Caique@mail.com',
-    password: '61532680c163157d92f094e6a0d4303f'
+
+const buttonLogin = document.querySelector("button")
+buttonLogin.addEventListener('click', () => {
+    const inputEmail = document.querySelector('.email')
+    const inputSenha = document.querySelector('.senha')
+
+    
+    let obj = {
+            email: inputEmail.value,
+            password: inputSenha.value
+        }
+    Usuario.login(obj)
 })
