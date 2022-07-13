@@ -43,103 +43,6 @@ import Habito from "../controller/habits.controller.js"
 
 // // habit_id: 435
 
-
-
-
-//evento de abrir e fechar modal criar habito
-const modal = document.querySelector('#criarHabito')
-const buttonCriarModal = document.querySelector('.botaoCriar')
-buttonCriarModal.addEventListener('click', () => {
-    modal.style.display = 'flex'
-})
-const buttonFecharModal = document.querySelector('.imageFechar')
-buttonFecharModal.addEventListener('click', () => {
-    modal.style.display = 'none'
-})
-
-//evento de abrir e fechar modal de excluir habito
-const modalExcluir = document.querySelector('#modal_excluirHabito')
-const buttonExcluirModal = document.querySelector('.botaoExcluir')
-buttonExcluirModal.addEventListener('click', (e) => {
-    e.preventDefault()
-    modalEdit.style.display = 'none'
-    modalExcluir.style.display = 'flex'
-})
-const buttonFecharModalExcluir = document.querySelector('.imageFecharExcluir')
-buttonFecharModalExcluir.addEventListener('click', () => {
-    modalExcluir.style.display = 'none'
-})
-
-
-
-// evento para abrir o editar 
-const edit = document.querySelectorAll('.conteudoEditar')
-const modalEdit = document.querySelector('#modal_editarHabito')
-edit.forEach(elem => {
-    elem.addEventListener('click', () => {
-        modalEdit.style.display = 'flex'
-    })
-})
-const buttonFecharEdit = document.querySelector(".imageFecharEdit")
-buttonFecharEdit.addEventListener('click', () => {
-    modalEdit.style.display = 'none'
-})
-
-// evento button logout 
-const buttonLogout = document.querySelector('.btnLogout')
-buttonLogout.addEventListener('click', () => {
-    localStorage.removeItem("@kenzie-habits-token")
-    localStorage.removeItem("@kenzie-habits-user")
-    window.location = '../../index.html'
-})
-
-
-//função de dados do user 
-let usuario = JSON.parse(localStorage.getItem('@kenzie-habits-user'))
-function elementosDom(data) {
-    const boxUser = document.querySelector(".segundoBox")
-    const figure = document.createElement("figure")
-    const img = document.createElement("img")
-    const h3 = document.createElement("h3")
-
-    h3.innerText = data.usr_name
-    img.src = data.usr_image
-
-    figure.append(img)
-    boxUser.append(figure, h3)
-
-    const figureBoxMenor = document.querySelector(".figureUser")
-    const imgMenorBox = document.createElement('img')
-    imgMenorBox.src = data.usr_image
-    figureBoxMenor.append(imgMenorBox)
-}
-elementosDom(usuario)
-
-
-
-
-//criar habito
-
-const buttonCriandoHabito = document.querySelector('.botaoAzulEscuro')
-buttonCriandoHabito.addEventListener('click', () => {
-    const titulo = document.querySelector('.inputTitulo').value.trim()
-    const descricao = document.querySelector(".areadescricao").value
-    const select = document.querySelector('.areacategoria').value
-
-    let habito = {
-        habit_title: titulo,
-        habit_description: descricao,
-        habit_category: select
-    }
-    Habito.createHabit(habito)
-    setTimeout(() => {
-        window.location.reload(true)
-    }, 1000)
-
-})
-
-
-
 let objs = await Habito.readAll()
 function listandoHabitos(obj) {
 
@@ -174,3 +77,145 @@ function listandoHabitos(obj) {
     })
 }
 listandoHabitos(objs)
+
+
+
+//evento de abrir e fechar modal criar habito
+const modal = document.querySelector('#criarHabito')
+const buttonCriarModal = document.querySelector('.botaoCriar')
+buttonCriarModal.addEventListener('click', () => {
+    modal.style.display = 'flex'
+})
+const buttonFecharModal = document.querySelector('.imageFechar')
+buttonFecharModal.addEventListener('click', () => {
+    modal.style.display = 'none'
+})
+
+
+
+//evento de abrir e fechar modal de excluir habito
+const modalExcluir = document.querySelector('#modal_excluirHabito')
+const buttonExcluirModal = document.querySelector('.botaoExcluir')
+buttonExcluirModal.addEventListener('click', (e) => {
+    e.preventDefault()
+    modalEdit.style.display = 'none'
+    modalExcluir.style.display = 'flex'
+})
+const buttonFecharModalExcluir = document.querySelector('.imageFecharExcluir')
+buttonFecharModalExcluir.addEventListener('click', () => {
+    modalExcluir.style.display = 'none'
+})
+
+
+
+// evento para abrir o editar 
+const edit = document.querySelectorAll('.conteudoEditar')
+const modalEdit = document.querySelector('#modal_editarHabito')
+const botaoSalvarAlteracoes = document.querySelector("#botaoSalvarAlteracoes")
+const botaoExcluirHabito = document.querySelector("#botaoExcluirHabito")
+
+edit.forEach(elem => {
+    elem.addEventListener('click', (event) => {
+        modalEdit.style.display = 'flex'
+        botaoSalvarAlteracoes.id = event.target.id    
+        botaoExcluirHabito.id = event.target.id    
+    })
+})
+const buttonFecharEdit = document.querySelector(".imageFecharEdit")
+buttonFecharEdit.addEventListener('click', () => {
+    modalEdit.style.display = 'none'
+})
+
+
+
+// Evento editar habito
+botaoSalvarAlteracoes.addEventListener("click", async (event) => {
+    event.preventDefault()
+    const formElements = [...event.target.parentNode.parentNode]
+    const data = {}
+    formElements.forEach(elem => {
+        if(elem.name !== "" && elem.value !== ""){
+            data[elem.name] = elem.value
+        }
+    })
+    
+    const idHabito = botaoSalvarAlteracoes.id
+    Habito.updateHabit(data, idHabito)
+    window.location.reload(true)    
+})
+
+
+
+
+//Evento excluir habito
+botaoExcluirHabito.addEventListener("click", (event) => {
+    event.preventDefault()
+    const idHabito = event.target.id
+    Habito.deleteHabit(idHabito)
+    window.location.reload(true)
+})
+
+
+
+//Evento cancelar excluir habito
+const botaoCancelarExcluirHabito = document.querySelector("#botaoCancelar_excluirHabito")
+
+botaoCancelarExcluirHabito.addEventListener("click", () => {
+    modalExcluir.style.display = "none"
+})
+
+
+
+
+// evento button logout 
+const buttonLogout = document.querySelector('.btnLogout')
+buttonLogout.addEventListener('click', () => {
+    localStorage.removeItem("@kenzie-habits-token")
+    localStorage.removeItem("@kenzie-habits-user")
+    window.location = '../../index.html'
+})
+
+
+
+//função de dados do user 
+let usuario = JSON.parse(localStorage.getItem('@kenzie-habits-user'))
+function elementosDom(data) {
+    const boxUser = document.querySelector(".segundoBox")
+    const figure = document.createElement("figure")
+    const img = document.createElement("img")
+    const h3 = document.createElement("h3")
+
+    h3.innerText = data.usr_name
+    img.src = data.usr_image
+
+    figure.append(img)
+    boxUser.append(figure, h3)
+
+    const figureBoxMenor = document.querySelector(".figureUser")
+    const imgMenorBox = document.createElement('img')
+    imgMenorBox.src = data.usr_image
+    figureBoxMenor.append(imgMenorBox)
+}
+elementosDom(usuario)
+
+
+
+
+//criar habito
+const buttonCriandoHabito = document.querySelector('.botaoAzulEscuro')
+buttonCriandoHabito.addEventListener('click', () => {
+    const titulo = document.querySelector('.inputTitulo').value.trim()
+    const descricao = document.querySelector(".areadescricao").value
+    const select = document.querySelector('.areacategoria').value
+
+    let habito = {
+        habit_title: titulo,
+        habit_description: descricao,
+        habit_category: select
+    }
+    Habito.createHabit(habito)
+    setTimeout(() => {
+        window.location.reload(true)
+    }, 1000)
+
+})

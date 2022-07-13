@@ -113,26 +113,29 @@
           <img src="../assets/img/x.png" alt="Fechar" class="imageFecharEdit" />
         </button>
       </div>
-      <form>
+      <form class="xxxxx">
         <label for="titulo">Título</label>
-        <input id="placeholder" type="text" name="titulo" placeholder="Fazer exercícios segunda pela manhã" />
+        <input id="placeholder" type="text" name="habit_title" placeholder="Fazer exercícios segunda pela manhã" />
         <label for="descricao">Descrição</label>
-        <textarea class="textarea-altura" name="descricao" id="placeholder-textarea" cols="30" rows="10"
+        <textarea class="textarea-altura" name="habit_description" id="placeholder-textarea" cols="30" rows="10"
           placeholder="Ir correr na praça próximo de casa às 7h:30min da manhã"></textarea>
         <label for="categoria">Categoria</label>
-        <select class="select-categorias" name="categoria">
-          <option class="option-criarHabito">Exemplo 1</option>
-          <option class="option-criarHabito">Exemplo 2</option>
+        <select class="select-categorias" name="habit_category">
+          <option class="option-criarHabito">saude</option>
+          <option class="option-criarHabito">estudos</option>
+          <option class="option-criarHabito">casa</option>
+          <option class="option-criarHabito">trabalho</option>
+          <option class="option-criarHabito">lazer</option>
 
         </select>
         <div class="status--EditarHabito">
           <label for="checkbox">Status</label>
-          <input name="checkbox" type="checkbox">
+          <input type="checkbox">
 
         </div>
         <div class="bottom-div">
           <button class="botaoExcluir">Excluir</button>
-          <button class="botaoAzulEscuroSalvar">Salvar alterações</button>
+          <button class="botaoAzulEscuroSalvar" id="botaoSalvarAlteracoes">Salvar alterações</button>
         </div>
       </form>
     </div>
@@ -158,7 +161,7 @@
 
       <div class="botoes_excluirHabito">
         <button class="botaoCinza" id="botaoCancelar_excluirHabito">cancelar</button>
-        <button class="botaoVermelho">Sim, excluir este hábito</button>
+        <button class="botaoVermelho" id="botaoExcluirHabito">Sim, excluir este hábito</button>
       </div>
     </div>
   </div>
