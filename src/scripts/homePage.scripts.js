@@ -198,4 +198,4 @@ console.log(objs)
 const concluidos = document.querySelector('.botaoConcluidos');
         concluidos.addEventListener('click', filtroConcluido)
 
-//concluidos.addEventListener('click', filtroConcluido)t 
+//concluidos.addEventListener('click', filtroConcluido)
