@@ -55,12 +55,13 @@ buttonCriarModal.addEventListener('click', () => {
 const buttonFecharModal = document.querySelector('.imageFechar')
 buttonFecharModal.addEventListener('click', () => {
     modal.style.display = 'none'
-})
+}) 
 
 //evento de abrir e fechar modal de excluir habito
 const modalExcluir = document.querySelector('#modal_excluirHabito')
 const buttonExcluirModal = document.querySelector('.botaoExcluir')
-buttonExcluirModal.addEventListener('click', () => {
+buttonExcluirModal.addEventListener('click', (e) => {
+    e.preventDefault()
     modalEdit.style.display = 'none'
     modalExcluir.style.display = 'flex'
 })
@@ -84,7 +85,7 @@ buttonFecharEdit.addEventListener('click', () => {
     modalEdit.style.display = 'none'
 })
 
-
+// evento button logout 
 const buttonLogout = document.querySelector('.btnLogout')
 buttonLogout.addEventListener('click', () => {
     localStorage.removeItem("@kenzie-habits-token")
@@ -92,8 +93,9 @@ buttonLogout.addEventListener('click', () => {
     window.location = '../../index.html'
 })
 
-let usuario = JSON.parse(localStorage.getItem('@kenzie-habits-user'))
 
+//função de dados do user 
+let usuario = JSON.parse(localStorage.getItem('@kenzie-habits-user'))
 function elementosDom(data) {
     const boxUser = document.querySelector(".segundoBox")
     const figure = document.createElement("figure")
