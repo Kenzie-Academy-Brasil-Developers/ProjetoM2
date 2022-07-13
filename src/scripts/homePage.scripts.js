@@ -167,7 +167,6 @@ elementosDom(usuario)
 
 
 
-
 //criar habito
 const buttonCriandoHabito = document.querySelector('.botaoAzulEscuro')
 buttonCriandoHabito.addEventListener('click', () => {
@@ -184,8 +183,9 @@ buttonCriandoHabito.addEventListener('click', () => {
     setTimeout(() => {
         window.location.reload(true)
     }, 1000)
-
 })
+
+
 
 //evento para abrir e fechar Editar usuario
 const editarUsuario = document.querySelector(".linkEditar")
@@ -220,3 +220,4 @@ botaoInserir.addEventListener("click", async (event) => {
     localStorage.setItem("@kenzie-habits-user", JSON.stringify(atualizarLocalStorage))
     window.location.reload(true)
 })
+}) 
