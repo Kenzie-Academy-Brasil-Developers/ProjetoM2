@@ -129,19 +129,22 @@ buttonFecharEdit.addEventListener('click', () => {
 
 
 // Evento editar habito
-botaoSalvarAlteracoes.addEventListener("click", async (event) => {
+botaoSalvarAlteracoes.addEventListener("click", (event) => {
     event.preventDefault()
     const formElements = [...event.target.parentNode.parentNode]
+    console.log(formElements)
     const data = {}
     formElements.forEach(elem => {
         if(elem.name !== "" && elem.value !== ""){
             data[elem.name] = elem.value
         }
     })
-    
+    console.log(data)
     const idHabito = botaoSalvarAlteracoes.id
     Habito.updateHabit(data, idHabito)
-    window.location.reload(true)    
+    setTimeout(() => {
+        window.location.reload(true)
+    }, 1000)
 })
 
 

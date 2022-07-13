@@ -338,7 +338,6 @@ div button {
 }
 
 table {
-  display: flex;
   width: max-content;
 }
 
