@@ -1,4 +1,6 @@
 import Habito from "../controller/habits.controller.js"
+import Usuario from "../controller/usuario.controller.js"
+
 
 // "email": "grupo3Caique@mail.com",
 // "password": "61532680c163157d92f094e6a0d4303f"
@@ -165,7 +167,6 @@ elementosDom(usuario)
 
 
 
-
 //criar habito
 const buttonCriandoHabito = document.querySelector('.botaoAzulEscuro')
 buttonCriandoHabito.addEventListener('click', () => {
@@ -182,16 +183,41 @@ buttonCriandoHabito.addEventListener('click', () => {
     setTimeout(() => {
         window.location.reload(true)
     }, 1000)
+})
 
+
+
+//evento para abrir e fechar Editar usuario
+const editarUsuario = document.querySelector(".linkEditar")
+const modalEditarUsuario = document.querySelector("#modal_editarUsuario")
+const buttonFecharEditarUsuario = document.querySelector("#buttonFecharEditarUsuario")
+editarUsuario.addEventListener("click", () => {
+    modalEditarUsuario.style.display = "flex"
+})
+buttonFecharEditarUsuario.addEventListener("click", () => {
+    modalEditarUsuario.style.display = "none"
+})
+
+//evento editar usuario
+const botaoInserir = document.querySelector("#botaoInserir")
+botaoInserir.addEventListener("click", async (event) => {
+    event.preventDefault()
+    const formEditarUsuario = [...event.target.parentNode]
+    const data = {}
+    formEditarUsuario.forEach(elem => {
+        if(elem.name !== "" && elem.value !== ""){
+            data[elem.name] = elem.value
+        }
+    })
+    const usuarioEditado = await Usuario.updateUser(data)
+    console.log(usuarioEditado)
+    const {usr_name, usr_email, usr_image} = usuarioEditado
+    const atualizarLocalStorage = {
+        usr_name: usr_name,
+        usr_email: usr_email,
+        usr_image: usr_image
+    }
+    localStorage.setItem("@kenzie-habits-user", JSON.stringify(atualizarLocalStorage))
+    window.location.reload(true)
+})
 }) 
-
-//Abrir modal de editar perfil e fechar
-const buttonEditarPerfil = document.querySelector('.linkEditar')
-const modalEditarUsuario = document.querySelector('#modal_editarUsuario')
-const buttonFecharEditarPerfil = document.querySelector('.imageFecharEditarPerfil')
-buttonEditarPerfil.addEventListener('click', () => {
-    modalEditarUsuario.style.display = 'flex'
-})
-buttonFecharEditarPerfil.addEventListener('click', () => {
-    modalEditarUsuario.style.display = 'none'
-})
