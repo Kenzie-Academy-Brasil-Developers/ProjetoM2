@@ -144,6 +144,8 @@ let objs = await Habito.readAll()
 function listandoHabitos(obj) {
 
     obj.forEach(elem => {
+        
+
         const table = document.querySelector('table')
         const tr = document.createElement("tr")
         const thStatus = document.createElement('th')
@@ -162,6 +164,8 @@ function listandoHabitos(obj) {
         thEditar.className = 'conteudoEditar'
         tr.className = 'conteudoTabela'
 
+        
+
         thTitulo.innerText = elem.habit_title
         thDescricao.innerText = elem.habit_description
         thCategoria.innerText = elem.habit_category
@@ -173,4 +177,25 @@ function listandoHabitos(obj) {
         table.append(tr)
     })
 }
-listandoHabitos(objs)
+listandoHabitos(objs);
+
+// criar filtro do habitos "Concluídos"
+console.log(objs)
+
+//const concluidos = document.querySelector('.botaoConcluidos');
+function filtroConcluido(){
+    const listaFiltroHabitos = objs.filter((obj) =>{
+        return obj.habit_status === true
+    })
+
+    
+    listandoHabitos(listaFiltroHabitos);
+
+
+}
+
+console.log(objs)
+const concluidos = document.querySelector('.botaoConcluidos');
+        concluidos.addEventListener('click', filtroConcluido)
+
+//concluidos.addEventListener('click', filtroConcluido)t 
