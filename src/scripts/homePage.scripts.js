@@ -220,3 +220,29 @@ botaoInserir.addEventListener("click", async (event) => {
     localStorage.setItem("@kenzie-habits-user", JSON.stringify(atualizarLocalStorage))
     window.location.reload(true)
 })
+
+
+
+//Funcio
+const botaoTodos = document.querySelector(".botaoTodos")
+const botaoConcluido = document.querySelector(".botaoConcluidos")
+
+botaoTodos.addEventListener("click", () => {
+    const table = document.querySelector('table')
+    const trs = document.querySelectorAll(".conteudoTabela")
+    trs.forEach(tr => {
+        tr.remove()
+    })
+    listandoHabitos(objs)
+})
+
+botaoConcluido.addEventListener("click", () => {
+    const statusTrue = objs.filter(obj => {
+        return obj.habit_status === true        
+    })
+    const trs = document.querySelectorAll(".conteudoTabela")
+    trs.forEach(tr => {
+        tr.remove()
+    })
+    listandoHabitos(statusTrue)
+})
