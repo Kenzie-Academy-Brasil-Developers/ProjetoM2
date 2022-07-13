@@ -15,7 +15,7 @@ export default class Usuario {
                 if (res.token !== undefined) {
                     localStorage.setItem("@kenzie-habits-token", JSON.stringify(res.token))
                 }
-                return res
+                return console.log(res)
             })
             .catch(err => console.log(err))
 
