@@ -14,6 +14,7 @@ export default class Usuario {
             .then(res => {
                 if (res.token !== undefined) {
                     localStorage.setItem("@kenzie-habits-token", JSON.stringify(res.token))
+                    localStorage.setItem("@kenzie-habits-user", JSON.stringify(res.response))
                     window.location = './src/views/homePage.views.html'
                 }
                 return console.log(res)
