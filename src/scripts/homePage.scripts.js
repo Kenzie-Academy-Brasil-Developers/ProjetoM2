@@ -9,6 +9,8 @@ let objs = await Habito.readAll()
 function listandoHabitos(obj) {
 
     obj.forEach(elem => {
+        console.log(elem)
+
         const table = document.querySelector('table')
         const tr = document.createElement("tr")
         const thStatus = document.createElement('th')
@@ -32,6 +34,13 @@ function listandoHabitos(obj) {
         thCategoria.innerText = elem.habit_category
         thEditar.innerText = '...'
         thEditar.id = elem.habit_id
+        inputCheck.id = elem.habit_id
+       
+        if(elem.habit_status === true) {
+            inputCheck.checked = true
+            thTitulo.style.textDecoration = 'line-through'
+        } 
+        
 
         thStatus.appendChild(inputCheck)
         tr.append(thStatus, thTitulo, thDescricao, thCategoria, thEditar)
@@ -219,4 +228,17 @@ botaoInserir.addEventListener("click", async (event) => {
     }
     localStorage.setItem("@kenzie-habits-user", JSON.stringify(atualizarLocalStorage))
     window.location.reload(true)
+})
+
+
+
+
+const check = document.querySelectorAll('.check')
+check.forEach(elem => {
+    elem.addEventListener('click',  () => {
+           Habito.completeHabit(elem.id)
+           setTimeout(() => {
+            window.location.reload(true)
+           }, 1000)
+    })
 })

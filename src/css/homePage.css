@@ -316,9 +316,6 @@ main {
   .dropdown-content a {
     display: flex;
   }
-  .dropdown:hover .dropdown-content {
-    display: flex;
-  }
 }
 
 .dropdown:hover .dropbtn {
@@ -515,3 +512,4 @@ th {
     max-width: 1000px;
   }
 }
+
