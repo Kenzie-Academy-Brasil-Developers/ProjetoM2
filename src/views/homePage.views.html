@@ -124,8 +124,11 @@
                     placeholder="Ir correr na praça próximo de casa às 7h:30min da manhã"></textarea>
                 <label for="categoria">Categoria</label>
                 <select class="select-categorias" name="habit_category">
-                    <option class="option-criarHabito">Exemplo 1</option>
-                    <option class="option-criarHabito">Exemplo 2</option>
+                    <option class="option-criarHabito" value="saude">Saude</option>
+                    <option class="option-criarHabito" value="trabalho">Trabalho</option>
+                    <option class="option-criarHabito" value="casa">Casa</option>
+                    <option class="option-criarHabito" value="lazer">Lazer</option>
+                    <option class="option-criarHabito" value="estudos">Estudos</option>
 
                 </select>
                 <div class="status--EditarHabito">
@@ -157,20 +160,15 @@
             </div>
             <div class="botoes_excluirHabito">
                 <button class="botaoCinza" id="botaoCancelar_excluirHabito">cancelar</button>
-                <button class="botaoVermelho">Sim, excluir este hábito</button>
+                <button class="botaoVermelho" id="botaoExcluirHabito">Sim, excluir este hábito</button>
             </div>
-        </div>
-        <div class="bottom-div">
-          <button class="botaoExcluir">Excluir</button>
-          <button class="botaoAzulEscuroSalvar" id="botaoSalvarAlteracoes">Salvar alterações</button>
         </div>
       </form>
     </div>
 
 
-
+<!-- MODAL EDITAR USUARIO -->
     <div class="modal_geral" id="modal_editarUsuario">
-
         <div class="modal-inner editarUsuario_modal-inner">
             <div class="fecharModal_modal-inner">
                 <h2>Editar perfil</h2>
@@ -186,13 +184,6 @@
                 <button class="botaoAzulClaro">Inserir</button>
             </form>
         </div>
-
-
-      <div class="botoes_excluirHabito">
-        <button class="botaoCinza" id="botaoCancelar_excluirHabito">cancelar</button>
-        <button class="botaoVermelho" id="botaoExcluirHabito">Sim, excluir este hábito</button>
-      </div>
-
     </div>
 
     <script type="module" src="../scripts/homePage.scripts.js"></script>

@@ -132,10 +132,9 @@ buttonFecharEdit.addEventListener('click', () => {
 botaoSalvarAlteracoes.addEventListener("click", (event) => {
     event.preventDefault()
     const formElements = [...event.target.parentNode.parentNode]
-    console.log(formElements)
     const data = {}
     formElements.forEach(elem => {
-        if(elem.name !== "" && elem.value !== ""){
+        if(elem.name !== "" && elem.value !== "" && elem.name !== "habit_status"){
             data[elem.name] = elem.value
         }
     })
@@ -151,11 +150,14 @@ botaoSalvarAlteracoes.addEventListener("click", (event) => {
 
 
 //Evento excluir habito
+
 botaoExcluirHabito.addEventListener("click", (event) => {
     event.preventDefault()
     const idHabito = event.target.id
     Habito.deleteHabit(idHabito)
-    window.location.reload(true)
+    setTimeout(() => {
+        window.location.reload(true)
+    },1000)
 })
 
 
