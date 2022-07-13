@@ -92,3 +92,23 @@ buttonLogout.addEventListener('click', () => {
     window.location = '../../index.html'
 })
 
+let usuario = JSON.parse(localStorage.getItem('@kenzie-habits-user'))
+
+function elementosDom(data) {
+    const boxUser = document.querySelector(".segundoBox")
+    const figure = document.createElement("figure")
+    const img = document.createElement("img")
+    const h3 = document.createElement("h3")
+
+    h3.innerText = data.usr_name
+    img.src = data.usr_image
+
+    figure.append(img)
+    boxUser.append(figure, h3)
+
+    const figureBoxMenor = document.querySelector(".figureUser")
+    const imgMenorBox = document.createElement('img')
+    imgMenorBox.src = data.usr_image
+    figureBoxMenor.append(imgMenorBox)
+}
+elementosDom(usuario)
