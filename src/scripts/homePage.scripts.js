@@ -264,7 +264,7 @@ botaoConcluido.addEventListener("click", () => {
     const statusTrue = objs.filter(obj => {
         return obj.habit_status === true        
     })
-    const trs = document.querySelectorAll(".conteudoTabela")
+    const trs = document.querySelectorAll(".conteudoTabela") 
     trs.forEach(tr => {
         tr.remove()
     })

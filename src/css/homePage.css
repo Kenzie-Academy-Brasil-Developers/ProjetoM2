@@ -322,7 +322,7 @@ main {
   position: absolute;
   background-color:var(--brand-4);
   min-width: 40px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px var(--grey-6);
   z-index: 10;
   border-radius:0.250rem;
   border: whitesmoke;
@@ -340,6 +340,7 @@ main {
 
 .dropdown-content a:hover {
   background-color:var(--brand-4);
+  box-shadow: 0px 8px 16px 0px var(--grey-6);
 }
 
 .dropdown:hover .dropdown-content {
@@ -573,4 +574,87 @@ th{
 
 .conteudoCategoria{
   opacity: 1;
+}
+
+
+#demo-top-bar {
+  text-align: left;
+  background: #222;
+  position: relative;
+  zoom: 1;
+  width: 100% !important;
+  z-index: 6000;
+  padding: 20px 0 20px;
+}
+#demo-bar-inside {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+#demo-bar-buttons {
+  padding-top: 10px;
+  float: right;
+}
+#demo-bar-buttons a {
+  font-size: 12px;
+  margin-left: 20px;
+  color: white;
+  margin: 2px 0;
+  text-decoration: none;
+  font: 14px "Lucida Grande", Sans-Serif !important;
+}
+#demo-bar-buttons a:hover,
+#demo-bar-buttons a:focus {
+  text-decoration: underline;
+}
+#demo-bar-badge {
+  display: inline-block;
+  width: 302px;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+}
+#demo-bar-badge a {
+  display: block;
+  width: 100%;
+  height: 38px;
+  border-radius: 0;
+  bottom: auto;
+  margin: 0;
+  background: url(../assets/img/lazer.png) no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+#demo-bar-badge:before, #demo-bar-badge:after {
+  display: none !important;
+}
+
+.tb_button {
+padding:1px;
+cursor:pointer;
+border-right: 1px solid #8b8b8b;
+border-left: 1px solid #FFF;
+border-bottom: 1px solid #fff;}
+.tb_button.hover {
+border:2px outset #def; 
+background-color: #f8f8f8 !important;}
+.ws_toolbar {
+ z-index:100000
+} 
+.ws_toolbar .ws_tb_btn {
+cursor:pointer;
+border:1px solid #555;
+padding:
+}   
+.tb_highlight{
+  background-color:yellow
+} 
+.tb_hide {
+  visibility:hidden
+}
+.ws_toolbar img {
+  padding:2px;
+  margin:0px
 }
