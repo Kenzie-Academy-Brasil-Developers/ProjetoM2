@@ -9,7 +9,6 @@ let objs = await Habito.readAll()
 function listandoHabitos(obj) {
 
     obj.forEach(elem => {
-        console.log(elem)
 
         const table = document.querySelector('table')
         const tr = document.createElement("tr")
@@ -241,4 +240,30 @@ check.forEach(elem => {
             window.location.reload(true)
            }, 1000)
     })
+})
+
+
+
+
+const botaoTodos = document.querySelector(".botaoTodos")
+const botaoConcluido = document.querySelector(".botaoConcluidos")
+
+botaoTodos.addEventListener("click", () => {
+    const table = document.querySelector('table')
+    const trs = document.querySelectorAll(".conteudoTabela")
+    trs.forEach(tr => {
+        tr.remove()
+    })
+    listandoHabitos(objs)
+})
+
+botaoConcluido.addEventListener("click", () => {
+    const statusTrue = objs.filter(obj => {
+        return obj.habit_status === true        
+    })
+    const trs = document.querySelectorAll(".conteudoTabela")
+    trs.forEach(tr => {
+        tr.remove()
+    })
+    listandoHabitos(statusTrue)
 })
