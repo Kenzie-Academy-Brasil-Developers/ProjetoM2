@@ -499,18 +499,22 @@ th{
     width: 200px;
   }
 
+  .conteudoDescricao{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+  }
+
   .categoria,
   .descricao,
-  .conteudoCategoria,
-  .conteudoDescricao {
+  .conteudoCategoria {
     display: flex;
     opacity: 0.5;
     width: 100px;
     justify-content: center;
   }
 
-  .descricao,
-  .conteudoDescricao {
+  .descricao{
     display: flex;
     opacity: 0.5;
     width: 300px;
