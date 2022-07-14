@@ -33,27 +33,14 @@ button{
   justify-content: center;
   align-items: center;
   display: none;
-  animation-duration: 0.5s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
 
 .botaoAzulClaro{
-    background-color: #A0ADF9;
+  background-color: #A0ADF9;
 }
 
 .modal-inner {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +50,20 @@ button{
   gap: 1rem;
   font-family: "Inter", sans-serif;
   border-radius: 0.5rem;
+  animation-duration: .7s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-bottom: 0%;
+    width: 100%;
+  }
 }
 
 .fecharModal_modal-inner {
