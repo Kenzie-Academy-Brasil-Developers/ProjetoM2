@@ -19,8 +19,27 @@ export default class Usuario {
                 }else{
                     const inputs = document.querySelectorAll("input")
                     inputs.forEach(input => {
-                        input.style.border = "2px solid red"
+                        input.style.border = "1px solid red"
                     })
+                    const arrayMsgErro = document.querySelectorAll(".pError")
+                    arrayMsgErro.forEach(msgErr => {
+                        msgErr.remove()
+                    })
+                    const formLogin = document.querySelector("#formLogin")
+                    const p = document.createElement("p")
+                    p.classList.add("pError")
+
+                    p.innerText = res.message
+                    p.style.color = "red"
+                    p.style.border = "1px solid red"
+                    p.style.position = "relative"
+                    p.style.left = "0"
+                    p.style.top = "-1rem"
+                    p.style.borderRadius = "0.3rem"
+                    p.style.padding = "0.5rem"
+                    p.style.fontWeight = "500"
+                    p.style.backgroundColor = "rgba(255, 0, 0, 0.090)"
+                    formLogin.insertAdjacentElement("afterbegin" ,p)
                     return res
                 }
             })

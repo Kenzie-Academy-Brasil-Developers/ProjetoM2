@@ -71,6 +71,7 @@ main {
     width: 80%;
     min-width: 280px;
     max-width: 450px;
+    margin-bottom: 5px;
 }
 
 .box-login form {
