@@ -2,6 +2,24 @@ button{
   cursor: pointer;
 }
 
+.check:checked {
+  accent-color: var(--sucess);
+}
+
+.botaoTodos:focus{
+  background: var(--brand-1);
+    color: white;
+    border-radius: 0.2rem;
+}
+.botaoConcluidos{
+  width: 5.5rem;
+}
+.botaoConcluidos:focus{
+  background: var(--brand-1);
+  color: white;
+  border-radius: 0.2rem;
+  width: 5.5rem;
+}
 
 .modal_geral {
   width: 100vw;
