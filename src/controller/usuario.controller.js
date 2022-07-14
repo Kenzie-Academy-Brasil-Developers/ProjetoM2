@@ -16,8 +16,13 @@ export default class Usuario {
                     localStorage.setItem("@kenzie-habits-token", JSON.stringify(res.token))
                     localStorage.setItem("@kenzie-habits-user", JSON.stringify(res.response))
                     window.location = './src/views/homePage.views.html'
+                }else{
+                    const inputs = document.querySelectorAll("input")
+                    inputs.forEach(input => {
+                        input.style.border = "2px solid red"
+                    })
+                    return res
                 }
-                return console.log(res)
             })
             .catch(err => console.log(err))
 
