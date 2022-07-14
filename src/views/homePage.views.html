@@ -19,7 +19,7 @@
 <body>
 
 
-   <header>
+    <header>
         <div class="primeiroBox">
             <h2>KenzieHablit</h2>
             <div class="dropdown">
@@ -35,7 +35,7 @@
         <div class="segundoBox">
 
         </div>
-    </header>     
+    </header>
 
     <main>
         <section class="secaoCabecalho">
@@ -56,6 +56,15 @@
                     <th class="categoria">Categoria</th>
                     <th class="editar">Editar</th>
                 </tr>
+
+                <!-- <tr class="conteudoTabela">
+                    <th class="conteudoStatus"><input type="checkbox" class="check"></th>
+                    <th class="conteudoTitulo">Titulo</th>
+                    <th class="conteudoDescricao">Descrição</th>
+                    <th class="conteudoCategoria"><div class="divCategoriaStyle">Categoria</div></th>
+                    <th class="conteudoEditar">Editar</th>
+                </tr> -->
+
 
             </table>
         </section>
@@ -79,11 +88,11 @@
                     placeholder="Digitar descrição"></textarea>
                 <label for="categoria">Categoria</label>
                 <select class="areacategoria" name="categoria">
-                    <option value="saude">Saude</option>
-                    <option value="estudos">Estudos</option>
-                    <option value="trabalho">Trabalho</option>
-                    <option value="lazer">Lazer</option>
-                    <option value="casa">Casa</option>
+                    <option value="Saude">Saude</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Casa">Casa</option>
                 </select>
                 <button type="button" class="botaoAzulEscuro">Inserir</button>
             </form>
@@ -106,7 +115,8 @@
             </div>
             <form>
                 <label for="titulo">Título</label>
-                <input id="placeholder" type="text" name="habit_title" placeholder="Fazer exercícios segunda pela manhã" />
+                <input id="placeholder" type="text" name="habit_title"
+                    placeholder="Fazer exercícios segunda pela manhã" />
                 <label for="descricao">Descrição</label>
                 <textarea class="textarea-altura" name="habit_description" id="placeholder-textarea" cols="30" rows="10"
                     placeholder="Ir correr na praça próximo de casa às 7h:30min da manhã"></textarea>
@@ -125,7 +135,7 @@
 
                 </div>
                 <div class="bottom-div">
-                    <button class="botaoExcluir" >Excluir</button>
+                    <button class="botaoExcluir">Excluir</button>
                     <button class="botaoAzulEscuroSalvar" id="botaoSalvarAlteracoes">Salvar alterações</button>
                 </div>
             </form>
@@ -151,11 +161,11 @@
                 <button class="botaoVermelho" id="botaoExcluirHabito">Sim, excluir este hábito</button>
             </div>
         </div>
-      </form>
+        </form>
     </div>
 
 
-<!-- MODAL EDITAR USUARIO -->
+    <!-- MODAL EDITAR USUARIO -->
     <div class="modal_geral" id="modal_editarUsuario">
         <div class="modal-inner editarUsuario_modal-inner">
             <div class="fecharModal_modal-inner">

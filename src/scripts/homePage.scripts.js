@@ -18,7 +18,9 @@ function listandoHabitos(obj) {
         const thDescricao = document.createElement('th')
         const thCategoria = document.createElement('th')
         const thEditar = document.createElement('th')
+        const divCategoriaStyle = document.createElement('div')
 
+        divCategoriaStyle.className = 'divCategoriaStyle'
         inputCheck.type = 'checkbox'
         inputCheck.className = 'check'
         thStatus.className = 'conteudoStatus'
@@ -30,7 +32,7 @@ function listandoHabitos(obj) {
 
         thTitulo.innerText = elem.habit_title
         thDescricao.innerText = elem.habit_description
-        thCategoria.innerText = elem.habit_category
+        divCategoriaStyle.innerText = elem.habit_category
         thEditar.innerText = '...'
         thEditar.id = elem.habit_id
         inputCheck.id = elem.habit_id
@@ -41,6 +43,7 @@ function listandoHabitos(obj) {
         } 
         
 
+        thCategoria.append(divCategoriaStyle)
         thStatus.appendChild(inputCheck)
         tr.append(thStatus, thTitulo, thDescricao, thCategoria, thEditar)
         table.append(tr)

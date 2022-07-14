@@ -399,6 +399,11 @@ tr {
   border-bottom: solid 2px rgba(0, 0, 0, 0.092);
   height: 2.3rem;
 }
+th{
+  display: flexbox;
+  align-items: center;
+  height: inherit;
+}
 
 .carregarMais {
   width: 7rem;
@@ -439,9 +444,7 @@ tr {
   display: flex;
 }
 
-th {
-  margin-top: 0.5rem;
-}
+
 
 @media (min-width: 1000px) {
   .secaoCabecalho {
@@ -450,6 +453,13 @@ th {
     width: 90vw;
     justify-content: space-between;
     max-width: 900px;
+  }
+  tr{
+    display: flexbox;
+    align-items: center;
+  }
+  th{
+    height: max-content;
   }
 
   .secaoCabecalho div {
@@ -513,3 +523,21 @@ th {
   }
 }
 
+
+
+.divCategoriaStyle{
+  background-color: var(--brand-4);
+  color: var(--brand-1);
+  font-weight: 500;
+  width: 90%;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+
+}
+
+.conteudoCategoria{
+  opacity: 1;
+}
