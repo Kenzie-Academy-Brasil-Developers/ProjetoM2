@@ -6,6 +6,7 @@ import Usuario from "../controller/usuario.controller.js"
 // "password": "61532680c163157d92f094e6a0d4303f"
 
 let objs = await Habito.readAll()
+
 function listandoHabitos(obj) {
 
     obj.forEach(elem => {
@@ -36,12 +37,12 @@ function listandoHabitos(obj) {
         thEditar.innerText = '...'
         thEditar.id = elem.habit_id
         inputCheck.id = elem.habit_id
-       
-        if(elem.habit_status === true) {
+
+        if (elem.habit_status === true) {
             inputCheck.checked = true
             thTitulo.style.textDecoration = 'line-through'
-        } 
-        
+        }
+
 
         thCategoria.append(divCategoriaStyle)
         thStatus.appendChild(inputCheck)
@@ -50,6 +51,11 @@ function listandoHabitos(obj) {
     })
 }
 listandoHabitos(objs)
+
+const bodyRemove = document.querySelector("body")
+setTimeout(() => {
+    bodyRemove.classList.remove("fade-in-image")
+}, 2000)
 
 
 
@@ -90,8 +96,8 @@ const botaoExcluirHabito = document.querySelector("#botaoExcluirHabito")
 edit.forEach(elem => {
     elem.addEventListener('click', (event) => {
         modalEdit.style.display = 'flex'
-        botaoSalvarAlteracoes.id = event.target.id    
-        botaoExcluirHabito.id = event.target.id    
+        botaoSalvarAlteracoes.id = event.target.id
+        botaoExcluirHabito.id = event.target.id
     })
 })
 const buttonFecharEdit = document.querySelector(".imageFecharEdit")
@@ -107,7 +113,7 @@ botaoSalvarAlteracoes.addEventListener("click", (event) => {
     const formElements = [...event.target.parentNode.parentNode]
     const data = {}
     formElements.forEach(elem => {
-        if(elem.name !== "" && elem.value !== "" && elem.name !== "habit_status"){
+        if (elem.name !== "" && elem.value !== "" && elem.name !== "habit_status") {
             data[elem.name] = elem.value
         }
     })
@@ -130,7 +136,7 @@ botaoExcluirHabito.addEventListener("click", (event) => {
     Habito.deleteHabit(idHabito)
     setTimeout(() => {
         window.location.reload(true)
-    },1000)
+    }, 1000)
 })
 
 
@@ -157,6 +163,7 @@ buttonLogout.addEventListener('click', () => {
 
 //função de dados do user 
 let usuario = JSON.parse(localStorage.getItem('@kenzie-habits-user'))
+
 function elementosDom(data) {
     const boxUser = document.querySelector(".segundoBox")
     const figure = document.createElement("figure")
@@ -211,18 +218,23 @@ buttonFecharEditarUsuario.addEventListener("click", () => {
 
 //evento editar usuario
 const botaoInserir = document.querySelector("#botaoInserir")
-botaoInserir.addEventListener("click", async (event) => {
+botaoInserir.addEventListener("click", async(event) => {
     event.preventDefault()
     const formEditarUsuario = [...event.target.parentNode]
     const data = {}
     formEditarUsuario.forEach(elem => {
-        if(elem.name !== "" && elem.value !== ""){
+        if (elem.name !== "" && elem.value !== "") {
             data[elem.name] = elem.value
+            if (event.preventDefault() === true) {
+
+
+            }
         }
+
     })
     const usuarioEditado = await Usuario.updateUser(data)
     console.log(usuarioEditado)
-    const {usr_name, usr_email, usr_image} = usuarioEditado
+    const { usr_name, usr_email, usr_image } = usuarioEditado
     const atualizarLocalStorage = {
         usr_name: usr_name,
         usr_email: usr_email,
@@ -237,11 +249,11 @@ botaoInserir.addEventListener("click", async (event) => {
 
 const check = document.querySelectorAll('.check')
 check.forEach(elem => {
-    elem.addEventListener('click',  () => {
-           Habito.completeHabit(elem.id)
-           setTimeout(() => {
+    elem.addEventListener('click', () => {
+        Habito.completeHabit(elem.id)
+        setTimeout(() => {
             window.location.reload(true)
-           }, 1000)
+        }, 1000)
     })
 })
 
@@ -262,7 +274,7 @@ botaoTodos.addEventListener("click", () => {
 
 botaoConcluido.addEventListener("click", () => {
     const statusTrue = objs.filter(obj => {
-        return obj.habit_status === true        
+        return obj.habit_status === true
     })
     const trs = document.querySelectorAll(".conteudoTabela")
     trs.forEach(tr => {

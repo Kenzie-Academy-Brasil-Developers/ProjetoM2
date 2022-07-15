@@ -12,6 +12,7 @@ buttonLogin.addEventListener('click', () => {
         password: inputSenha.value
     }
     Usuario.login(obj)
+
 })
 
 
